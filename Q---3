@@ -1,0 +1,48 @@
+//ARRANGING THE ARRAY IN WAVE FORM IN WHICH THE ELEMENT PRESENT IN THE EVEN INDEX SHOULD BE GREATER THEN THE NEIGHBOUR ODD INDEX ELEMENT.
+//ARRAY IS ALREADY SORTED IN ASCENDING ORDER 
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[5] = {2, 3, 5, 4, 6};
+    int n = 5;
+    for (int i = 0; i < n; i += 2) {
+        if (i + 1 >= n) { // stop if next element doesn't exist
+            break;
+        }
+        swap(arr[i], arr[i + 1]);
+    }
+
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+
+    return 0;
+}
+FIRST I HAVE WRITTEN THE THIS CODE THAN DEBUG THE CODE AFTER ANALYSING THE SORTED ORDER CONDITION AGAIN
+
+#include <iostream>
+using namespace std;
+int  main(){
+int arr[5]={2,3,5,4,6};
+int n=5;
+for(int i=0; i<n; i=i+2){
+    while(i>=0 && i<n){
+    int curr=arr[i];
+    int prev=arr[i-1];
+    int forward=arr[i+1];
+     if(arr[i]>=arr[i-1] && arr[i+1]<=arr[i]){
+        continue;
+    }
+     else if(arr[i]<arr[i-1] || arr[i]<arr[i+1]){
+      swap(arr[i],arr[i-1]);
+      swap(arr[i],arr[i+1]);
+    }
+    }
+}
+for(int i=0; i<n; i++){
+    cout<<arr[i]<<" "<<endl;
+}
+return 0;
+ }
+
