@@ -1,0 +1,16 @@
+//ADDING 1 TO NUMBER REPRESENTEDD AS ARRAY OF DIGITS
+#include <iostream>
+using namespace std;
+int extract(int arr[],int n){
+    int digit=0;
+for(int i=0; i<n; i++){
+    digit=digit*10+arr[i];//recognised the pattern of extracting digit from the palindrome problem of integer
+}
+return digit+1;
+}
+int main(){
+    int arr[3]={1,5,3};
+    int sum = extract(arr,3);
+    cout<<"final sum after adding 1 to array digit  "<<sum<<endl;
+    return 0;
+}
