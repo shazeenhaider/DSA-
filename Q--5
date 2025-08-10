@@ -1,0 +1,76 @@
+DELETING AN ELEMENT FROM ARRAY AT SPECIFIC INDEX
+#include <iostream>
+using namespace std;
+int main()
+{
+    int arr[5];
+    int n = 5;
+    int index;
+    cout << "enter the element of array " << endl;
+    for (int i = 0; i < n; i++)
+    {
+        cin >> arr[i];
+    }
+    cout << "enter the index at which you want to delete element " << endl;
+    cin >> index;
+    cout << "Array after Deletion of element at " << index << endl;
+    for (int k = 0; k < n; k++)
+    {
+        if (k == index)
+        {
+            arr[index]= 0;
+        }
+        else
+        {
+            cout << arr[k] << " " << endl;
+        }
+    }
+    cout<<"size of array does not reduce"<<endl;
+    int arraysize=sizeof(arr)/sizeof(int);
+    cout<<arraysize<<endl;
+    return 0;
+
+***********DELETION SHIFTING OF ELEMENT WITH REDUCE SIIZE********
+#include <iostream>
+using namespace std;
+int main()
+{
+    int arr[5];
+    int n = 5;
+    int index;
+
+    cout << "Enter the elements of the array: " << endl;
+    for (int i = 0; i < n; i++)
+    {
+        cin >> arr[i];
+    }
+    cout<<"size of the array before deletion "<<n<<endl;
+
+    cout << "Enter the index at which you want to delete element: ";
+    cin >> index;
+
+    if (index < 0 || index >= n) {
+        cout << "Invalid index!" << endl;
+        return 0;
+    }
+
+    // Shift elements to the left
+    for (int i = index; i < n - 1; i++)
+    {
+        arr[i] = arr[i + 1];
+    }
+
+    n--; // reduce size
+    cout<<"size of array after deletion  "<<n<<endl;
+
+    cout << "Array after deletion: ";
+    for (int i = 0; i < n; i++)
+    {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
+
+}
