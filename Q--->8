@@ -1,0 +1,36 @@
+
+**********Insert an adjacent duplicate for all occurrences of a given element****************
+#include <iostream>
+using namespace std;
+int main(){
+    int key;
+    int arr[8]={1,0,2,3,0,4,5,0};
+    int n=8;
+    cout<<"enter the element you want to duplicate for all occurence"<<endl;
+    cin>>key;
+    int i;
+   for ( i = 0; i < n; i++) {
+    if (arr[i] == key) {
+        cout << "Key is present in array" << endl;
+        break;
+    }
+}
+if ( i==n) {
+    cout << "Key is not present in whole array" << endl;
+}
+    for(int i=0; i<n-1; i++){
+        // i<n-1 not because when i is at last index i+1 (INVAID) OUT OF BOUND hence stop before
+        if(arr[i]==key){
+            for(int j=n-1; j>i; j--){//key is at index i hence stop j at i+1
+                 arr[j]=arr[j-1];//shifting of element to make space for duplicate
+            }
+            arr[i+1]=key;//inserting the key to the empty space i+1;
+            i++;//skip over the new duplicate (this i only increase if duplicate occur but in for loop everytime)
+        }
+    }
+    cout<<"array after the duplication of key in previous"<<endl;//printing the Array
+    for(int i=0; i<n; i++){
+        cout<<arr[i]<<" ";
+    }
+    return 0;
+}
