@@ -1,0 +1,75 @@
+#include <iostream>
+using namespace std;
+class shape{
+    public:
+    virtual float area()=0;//pure virtual object created
+    virtual float perimeter()=0;
+};
+class rectangle:public shape{
+    int length,breath;
+    public:
+    rectangle(int l, int b){
+        length=l;
+        breath=b;
+    }
+    float area(){
+        return length*breath;
+    }
+    float perimeter(){
+        return 2*(length+breath);
+    }
+    
+    friend void comparearea(shape *s1, shape *s2);//friend function declared
+    friend void compareperimeter(shape *s1, shape *s2);
+};
+class circle:public shape{
+    int radius;
+    public:
+    circle(int r){
+        radius=r;
+    }
+    float area(){
+        return 3.14*radius*radius;
+    }
+    float perimeter(){
+        return 2*3.14*radius;
+    }
+    
+    friend void comparearea(shape *s1, shape *s2);//friend function declared
+    friend void compareperimeter(shape *s1, shape *s2);
+};
+void comparearea(shape *s1, shape *s2){
+    float area1=s1->area();
+    float area2=s2->area();
+    if(area1>area2){
+        cout<<"reactangle has greater area "<<area1<<endl;
+    }
+    else if(area1<area2){
+        cout<<"circle has greater area "<<area2<<endl;
+    }
+    else
+    cout<<"both has tha same area"<<endl;
+}
+void compareperimeter(shape *s1, shape *s2){
+    float peri1=s1->perimeter();
+    float peri2=s2->perimeter();
+    if(peri1>peri2){
+        cout<<"reactangle has greater perimeter "<<peri1<<endl;
+    }
+    else if(peri1<peri2){
+        cout<<"circle has greater perimeter "<<peri2<<endl;
+    }
+    else
+    cout<<"both has tha same perimeter "<<endl;
+}
+int main(){
+    rectangle r(8,9);
+    circle c(5);
+    cout<<"area of the rectangle "<<r.area()<<endl;
+    cout<<"area of the circle "<<c.area()<<endl;
+    cout<<"perimeter of the reactangle "<<r.perimeter()<<endl;
+    cout<<"perimeter of the circle "<<c.perimeter()<<endl;
+    comparearea(&r,&c);
+    compareperimeter(&r,&c);
+    return 0;
+}
