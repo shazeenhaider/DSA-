@@ -4,7 +4,7 @@ int main(){
     int row,col;
     cout<<"enter the number of rows"<<endl;
     cin>>row;
-    cout<<"enter the numbe rof column"<<endl;
+    cout<<"enter the number of col"<<endl;
     cin>>col;
     for(int i=1; i<=row; i++){//tracing row
         for(int j=1; j<=col; j++){//tracing column
@@ -37,3 +37,68 @@ return 0;
 ***
 ****
 *****
+
+
+#include <iostream>
+using namespace std;
+int main(){
+    int i,j,row;
+    cout<<"enter the number of rows"<<endl;
+    cin>>row;
+    for(i=1; i<=row; i++){
+        for(j=1; j<=row; j++){
+            if(i==1|| i==row||j==1||j==row){
+                cout<<"*";
+            }
+            else
+            cout<<" ";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+****
+*  *
+*  *
+****
+#include <iostream>
+using namespace std;
+int main(){
+    int i,j,row;
+    cout<<"enter the number of row"<<endl;
+    cin>>row;
+    for(i=1; i<=row; i++){
+        for(j=1; j<row-i+1; j++){
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+*****
+****
+***
+**
+*
+#include <iostream>
+using namespace std;
+int main(){
+    int i,j,row;
+    cout<<"enter the number of row"<<endl;
+    cin>>row;
+    for(i=1; i<=row; i++){
+        for(j=i; j<row; j++){
+            cout<<" ";
+        }
+        for(j=1; j<=i; j++){
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+    *
+   **
+  ***
+ ****
+***** 
