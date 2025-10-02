@@ -1,0 +1,8 @@
+#print the first n natural  number
+num=int(input("enter the value of num\n"))
+i=0#initialization of iterator
+while(i<num):
+    print(i)
+    i = i+1#updation of the iterator
+
+print("loop ended succesfully")
