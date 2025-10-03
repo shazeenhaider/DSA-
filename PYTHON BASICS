@@ -56,3 +56,34 @@ a=num%365
 week=a//7#no of week
 b=a%7#no of the days left
 print(f" years:{year} week:{week} days:{b}" )
+
+#check year is leap year or not
+year=int(input("Enter a year\n"))
+if(year%400==0) or (year%4==0 and year%100!=0):
+    print(year,"year is a leap year")
+else:
+    print(year,"year is not a leap year")
+#printing the fibonacci series
+num=int(input("Enter the number of term you want\n"))
+print(f"First {num} term of fibonacci series are: ")
+first=0
+second=1
+if num >= 1:
+    print(first, end=" ")
+if num >= 2:
+    print(second, end=" ")
+for i in range(num-2):
+    third=first+second
+    print(third, end=" ")
+    first=second
+    second=third
+#check whether a number is prime or not
+num=int(input("Enter a number\n"))
+flag=0
+for i in range(2,num,1):
+    if(num%i==0):
+        print("number is not prime")
+        break
+else:
+     print("number is prime")
+    
