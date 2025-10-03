@@ -49,3 +49,10 @@ elif(num>=50):
 else:
     print("FAIL")
 
+#integer division in python
+num=int(input("Enter the number of days\n"))
+year=num//365#number of year
+a=num%365
+week=a//7#no of week
+b=a%7#no of the days left
+print(f" years:{year} week:{week} days:{b}" )
