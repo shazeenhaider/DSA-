@@ -16,3 +16,13 @@ while(i<=10):
     print(num,"X",i,"=",tab)
     i=i+1
 print("loop completed ")    
+
+#find the sum of first n natural number
+num=int(input("enter the value of n\n"))
+sum=0 #initialization
+i=0
+while(i<=num):
+    sum=sum+i
+    i=i+1
+print("sum of the n natural number is",sum)
+
