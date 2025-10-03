@@ -26,3 +26,11 @@ while(i<=num):
     i=i+1
 print("sum of the n natural number is",sum)
 
+#factorial of a number in python
+num=int(input("enter a number to find factorial\n"))
+fact=1#initialize 
+while(num>0):
+    fact=fact*num #5! * 4! * 3! * 2! * 1! * 0!
+    num=num-1
+print("factorial of num is",fact)    
+
