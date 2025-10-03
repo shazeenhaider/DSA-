@@ -6,3 +6,13 @@ while(i<num):
     i = i+1#updation of the iterator
 
 print("loop ended succesfully")
+
+
+#multiplication table in python programming
+num=int(input("enter the number\n"))
+i=1
+while(i<=10):
+    tab=num*i
+    print(num,"X",i,"=",tab)
+    i=i+1
+print("loop completed ")    
