@@ -107,5 +107,15 @@ for i in range(0,siz,1):
     list3.append(b)
 print(f"printing the user defined list3 {list3}")
 
+#sort a list of names according to thier length
+list4=[]
+siz=int(input("enter the size of list\n"))
+#print(f"enter the names in list of size{siz}")
+for i in range(0,siz,1):
+    b=input(f"enter the name in the list at {i}\n")
+    list4.append(b)
+list4.sort(key=len,reverse=False)
+print(list4)
 
+    
     
