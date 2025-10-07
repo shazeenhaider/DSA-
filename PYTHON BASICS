@@ -128,4 +128,28 @@ for ch in string:
         cons=cons+1
 print(f"Number fo vowel {vow}")  
 print(f"Number of constant {cons}")    
+
+#Wap to find minimum and maximum in tuple
+tup1=(2,3,4,1,6,7,8)
+maxx=max(tup1)
+minn=min(tup1)
+print(f"Max and Min of the tuple {maxx} and {minn}")
+
+#user defined tuple
+ch=input("Enter element for tuple\n")
+tup=ch.split()#default split by space
+print(tup)
+print("converting list to immutable tuple")
+print(tuple(tup))
+
+#user defined tuple without split func
+size=int(input("Enter the size tuple \n"))
+element=[]
+for i in range(size):
+    item=input(f"Enter item at {i+1}\n")
+    element.append(item)
+print(tuple(element))   
+
+
+
     
