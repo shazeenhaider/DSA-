@@ -148,7 +148,21 @@ element=[]
 for i in range(size):
     item=input(f"Enter item at {i+1}\n")
     element.append(item)
-print(tuple(element))   
+print(tuple(element))
+
+#Wap to find repeated element in tuple
+tup=(2,3,1,2,5,6,3)
+list1=[]
+for i in tup:
+    if tup.count(i)>1 and i not in list1:
+        list1.append(i)
+con=tuple(list1)
+print(con)
+#Sort a tuple of tuples by the second element
+tup=((2,3),(9,8),(5,4))
+soreted=tuple(sorted(tup,key=lambda x:x[1]))
+print(soreted)
+
 
 
 
