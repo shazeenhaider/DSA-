@@ -117,5 +117,15 @@ for i in range(0,siz,1):
 list4.sort(key=len,reverse=False)
 print(list4)
 
-    
+#wap a program in python to count the number of vowel and constant
+string=input("Enter a string check vowel/constant\n")
+vow=0
+cons=0
+for ch in string:
+    if ch.lower() in ['a','e','i','o','u']:#convert upper casetolower
+        vow=vow+1
+    elif ch.isalpha():#check for only english alphabets
+        cons=cons+1
+print(f"Number fo vowel {vow}")  
+print(f"Number of constant {cons}")    
     
