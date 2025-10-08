@@ -254,7 +254,31 @@ def count_vowels(string):
 string=input("Enter the string to check number of vowel\n")
 result=count_vowels(string)
 print(f"Number of vowel in {string} is {result}")
-    
+
+#wap using function to find maximum of three number 
+def largest_three(a,b,c):
+    if a>b and a>c:
+        print("A is the greatest number")
+    elif b>a and b>c:
+        print("C is the greatest number")
+    else:
+        print("C is the greatest")
+a=int(input("enter the value of a\n"))
+b=int(input("enter the value of b\n"))
+c=int(input("enter the value of c\n"))
+largest_three(a,b,c)
+
+#wap to check prime number using function
+def prime_number(num):
+    for i in range(2,num-1,1):
+        if num%i==0:
+            print("Number is not prime")
+            break
+    else:
+        print("Number is prime")
+num=int(input("enter the number check for prime number\n"))
+prime_number(num)
+
 
 
 
