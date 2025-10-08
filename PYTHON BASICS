@@ -218,6 +218,44 @@ print(list1)
 length=cal_length(list1)
 print(f"Length of the list is {length}")
 
+#printing the list element in the line
+def print_list(parameter):
+    for i in range(len(parameter)):
+        print(parameter[i],end=" ")
+list1=[4,5,6,"star","sun","moon"]
+print_list(list1)
+
+#convert USD to INR using function
+def usd_inr(num):
+    return num*83 #current value of usd
+num=int(input("Enter the amount $ convert to INR\n"))
+result=usd_inr(num)
+print(f" {num} USD ==  {result} INR")
+
+#wap using funtion to find the sum of digits
+def sum_digits(num):
+    sum=0
+    while(num!=0):
+        remainder=num%10
+        sum=sum+remainder
+        num=num//10
+    return sum
+num=int(input("Enter the number to find sum of digits\n"))
+result=sum_digits(num)
+print(f"sum of digits of {num} = {result}")
+
+#wap that take a string and return the number of vowels in string
+def count_vowels(string):
+    count=0
+    for i in string:
+        if i.lower() in ['a','e','i','o','u']:
+            count=count+1
+    return count
+string=input("Enter the string to check number of vowel\n")
+result=count_vowels(string)
+print(f"Number of vowel in {string} is {result}")
+    
+
 
 
 
