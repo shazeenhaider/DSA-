@@ -1,0 +1,12 @@
+#wap in oops to print the name and average marks of student 
+class student:
+    def __init__(self,name,mark):
+        self.name=name
+        self.mark=mark
+    def get_avg(self):
+        sum=0
+        for i in self.mark:
+            sum +=i
+        print("hello", self.name," your average marks is",sum//3)
+s1 = student("shahzain",[34,76,98])
+s1.get_avg()
