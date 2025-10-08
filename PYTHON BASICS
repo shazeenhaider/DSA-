@@ -206,6 +206,17 @@ element=int(input("Enter the number of element of fibonacci series\n"))
 for i in range(element):
     print(cal_fact(i),end=" ")
 
+#Wap to print length of list using funtion
+def cal_length(lis):
+    return len(lis)
+num=int(input("Enter the number of elemnt to insert in list"))
+list1=[]
+for i in range(num):
+    element=int(input(f"enter the element of list index {i}\n"))
+    list1.append(element)
+print(list1)
+length=cal_length(list1)
+print(f"Length of the list is {length}")
 
 
 
