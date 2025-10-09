@@ -40,6 +40,18 @@ class DoublyList{
             tail=newnode;
         }
     }
+    void pop_front(){
+        if(head==NULL){
+         cout<<"linked list is empty";
+        }
+        Node* temp=head;
+        head=head->next;
+        if(head!=NULL){
+            head->prev=NULL;
+        }
+        temp->next=NULL;
+        delete temp;
+    }
     void printlist(){
         Node* temp=head;
         while(temp!=NULL){
@@ -56,6 +68,7 @@ int main(){
     dbll.push_front(2);
     dbll.push_front(1);
     dbll.push_back(5);
+    dbll.pop_front();
     dbll.printlist();
     return 0;
 }
