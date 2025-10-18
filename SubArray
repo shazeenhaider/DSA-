@@ -1,0 +1,30 @@
+// printing the index of a subarray(contiguous part of an array)and subsequence not contiguous part of an array
+#include <iostream>
+using namespace std;
+void printsubarray(int arr[], int size)
+{
+    int count = 0;
+    int start, end;
+    for (start = 0; start < size; start++)
+    {
+        for (end = start; end < size; end++)
+        {
+            //  cout<<"("<<start<<","<<end<<")"<<endl;
+            // printing the value fo subarray
+            for (int i = start; i <= end; i++)
+            {
+                cout << arr[i] << " ";
+            }
+            cout << endl;
+            count++;
+        }
+    }
+    cout << "Total number of subarray " << count << endl;
+}
+int main()
+{
+    int arr[5] = {4, 6, 8, 2, 9};
+    int n = 5;
+    printsubarray(arr, n);
+    return 0;
+}
