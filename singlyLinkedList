@@ -116,6 +116,15 @@ public:
         delete tail;
         tail=temp;
     }
+int getCount(Node* head){
+        int count=0;
+        Node* temp=head;
+        while(temp!=NULL){
+        temp=temp->next;
+        count++;
+          }
+        return count;
+    }
 };
 int main()
 {
@@ -126,5 +135,6 @@ int main()
     ll.push_back(8);
     ll.insert(100, 4);
     ll.Printlist();
+    cout<<"Length of the linkedlist "<<ll.getCount(ll.head)<<endl;
     return 0;
 }
