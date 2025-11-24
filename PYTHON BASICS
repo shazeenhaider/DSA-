@@ -279,6 +279,8 @@ def prime_number(num):
 num=int(input("enter the number check for prime number\n"))
 prime_number(num)
 
+#wap to find gcd using recursion
+
 
 
 
